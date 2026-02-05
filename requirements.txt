@@ -1,0 +1,17 @@
+# UI Framework
+PySide6
+
+# Arduino & Serial Communication
+pyserial
+
+# Fingerprint Sensor & I2C/SPI Sensors
+adafruit-circuitpython-fingerprint
+adafruit-blinka
+smbus2
+
+# Audio and Microphone
+pygame
+pyaudio
+
+# Utilities
+python-dotenv
