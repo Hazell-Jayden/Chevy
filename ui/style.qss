@@ -1,0 +1,86 @@
+/* Base window */
+QWidget {
+    background-color: #F1FFFA;
+}
+
+/* Apply to all frames */
+QFrame {
+    border: 5px solid #000000;
+    border-radius: 8px;
+}
+
+#time_label {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    border: 0px;
+}
+
+#date_label {
+    font-size: 30px;
+    border: 0px;
+}
+
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6 {
+    background-color: #0B70CE;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+#btn1:checked, #btn2:checked, #btn3:checked, #btn4:checked {
+    background-color: #2db30b;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+#btn1:pressed, #btn2:pressed, #btn3:pressed, #btn4:pressed, #btn5:pressed, #btn6:pressed {
+    background-color: white;
+    color: black;
+}
+
+/* The track of the slider */
+QSlider::groove:horizontal {
+    border: 1px solid #444;
+    height: 20px;
+    background: #222;
+    margin: 0 15px;
+    border-radius: 10px;
+}
+
+/* The slider track */
+QSlider::groove:horizontal {
+    border: 1px solid #333;
+    height: 40px; /* Thicker for touch */
+    background: #111;
+    border-radius: 20px;
+}
+
+/* The part of the track to the LEFT of the handle (the 'filled' part) */
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, 
+                stop:0 #ebdd90, stop:1 #dfdb08);
+    border-radius: 20px;
+    margin: 0 15px;
+}
+
+/* The handle you drag */
+QSlider::handle:horizontal {
+    background: white;
+    border: 3px solid green;
+    width: 60px;
+    height: 80px;
+    margin: -20px -15px; 
+    border-radius: 15px;
+}
+
+#brightness_title {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    border: 0px;
+}
+
+#brightness_perc {
+    font-size: 60px;
+    color: #dfdb08;
+}

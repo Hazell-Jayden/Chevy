@@ -1,0 +1,10 @@
+WAYLAND_DISPLAY=wayland-0 wlr-randr --output DSI-2 --off
+
+for i in {1..5}; do 
+  sudo sh -c 'echo 0 > /sys/class/backlight/11-0045/brightness'; sleep 0.2; 
+  sudo sh -c 'echo 255 > /sys/class/backlight/11-0045/brightness'; sleep 0.2; 
+done
+
+sudo brightnessctl set 50%
+
+vcgencmd measure_temp

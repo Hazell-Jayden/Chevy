@@ -1,20 +1,20 @@
 import sys
+import signal 
 from PySide6.QtWidgets import QApplication
 from ui.main_window import MainWindow
+import os
+import sys
 
 def main():
-    # 1. Initialize the Application
+    print("Starting program")
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
+
     app = QApplication(sys.argv)
 
-    # 2. Create the Window
     window = MainWindow()
-    
-    # 3. Future Hardware Connections go here!
-    # Example: arduino.signal.connect(window.update_ui_status)
-    window.update_ui_status("Dashboard Loaded. Ready for Arduino.")
-
-    # 4. Show and Run
     window.show()
+
     sys.exit(app.exec())
 
 if __name__ == "__main__":
